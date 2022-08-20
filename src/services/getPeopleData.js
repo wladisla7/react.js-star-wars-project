@@ -1,5 +1,6 @@
 import {
     HTTP, HTTPS, SWAPI_ROOT, SWAPI_PEOPLE,
+    GUIDE_IMG_EXTENTION, URL_IMG_PERSONE
 } from '../constatns/api';
 
 const checkProtocol = url => {
@@ -23,3 +24,5 @@ const getId = (url, category) => {
 }
 
 export const getPeopleId = url => getId(url, SWAPI_PEOPLE);
+
+export const getPeopleImage = id => `${URL_IMG_PERSONE}/${id + GUIDE_IMG_EXTENTION}`;
