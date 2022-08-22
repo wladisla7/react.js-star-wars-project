@@ -6,7 +6,7 @@ import { API_PEOPLE } from '@constants/api.js';
 import { getPeopleId, getPeopleImage } from '@services/getPeopleData.js';
 import PeopleList from '@components/PeopleList'
 
-// import styles from './PeoplePage.module.css'
+ 
 
 const PeoplePage = ({ setEerrorApi }) => {
     const [people, setPeople] = useState(null);
