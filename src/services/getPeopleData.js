@@ -1,7 +1,7 @@
 import {
     HTTP, HTTPS, SWAPI_ROOT, SWAPI_PEOPLE,
     GUIDE_IMG_EXTENTION, URL_IMG_PERSONE
-} from '../constatns/api';
+} from '@constants/api';
 
 const checkProtocol = url => {
     if (url.indexOf(HTTPS) !== -1) {
