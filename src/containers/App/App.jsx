@@ -1,18 +1,22 @@
-import PeoplePage from '@containers/PeoplePage';
-
 import { Routes, Route } from 'react-router-dom';
+import Header from '@components/Header'
+import routesConfig from '@routes/routesConfig';
 
-import './App.css';
+import styles from './App.module.css';
 
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={styles.wrapper}>
+      <Header />
       <Routes>
-        <Route
-          path="/"
-          element={<PeoplePage />}
-        />
+        {routesConfig.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+          />
+        ))}
       </Routes>
     </div>
   );
