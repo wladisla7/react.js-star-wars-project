@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.headerContainer a {
+    display: block;
+    margin: 0 10px;
+    padding: 7px 10px;
+    min-width: 70px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 2px white, 0 0 40px blue;
+    transition: .4s;
+    cursor: pointer;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.headerContainer :global(a.active) {
+    border: 2px solid #ae72c2;
+    color: #ae72c2;
+    text-shadow: none;
+}
