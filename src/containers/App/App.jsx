@@ -1,8 +1,8 @@
-import PeoplePage from '@containers/PeoplePage'
+import PeoplePage from '@containers/PeoplePage';
 import './App.css';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>StarWars</h1>
