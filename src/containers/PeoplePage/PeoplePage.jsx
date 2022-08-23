@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import PeopleList from '@components/PeopleList'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { getApiResource } from '@utils/network.js';
-import { API_PEOPLE } from '@constants/api.js';
 import { getPeopleId, getPeopleImage } from '@services/getPeopleData.js';
+import { API_PEOPLE } from '@constants/api.js';
 
 
 
@@ -40,7 +41,7 @@ const PeoplePage = ({ setErrorApi }) => {
     }, []);
     return (
         <>
-            <h1>Navigator</h1>
+            <h1 className="headerText">Navigator</h1>
             {people && <PeopleList people={people} />}
         </>
 
