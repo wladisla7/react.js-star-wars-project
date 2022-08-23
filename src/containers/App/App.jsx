@@ -1,12 +1,19 @@
 import PeoplePage from '@containers/PeoplePage';
+
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 
 
 const App = () => {
   return (
     <div className="App">
-      <h1>StarWars</h1>
-      <PeoplePage />
+      <Routes>
+        <Route
+          path="/"
+          element={<PeoplePage />}
+        />
+      </Routes>
     </div>
   );
 }
