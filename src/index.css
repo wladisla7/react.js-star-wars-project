@@ -1,6 +1,32 @@
+:root {
+  --transition: .4s;
+  --theme-default-header: #cccc46;
+}
+
+
 body {
   margin: 0;
   background-color: black;
+  font-size: 16px;
+  background-image: url("@static/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
 }
 
- 
+img {
+  display: block;
+}
+
+.headerText {
+  line-height: 1.7;
+  font-size: 26px;
+  text-shadow: 0 0 2px black;
+  color: var(--theme-default-header);
+  transition: color var(--transition-);
+  -webkit-transition: color var(--transition-);
+  -moz-transition: color var(--transition-);
+  -ms-transition: color var(--transition-);
+  -o-transition: color var(--transition-);
+}
