@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 
+import PeopleList from '@components/PeopleList'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { getApiResource } from '@utils/network.js';
 import { API_PEOPLE } from '@constants/api.js';
 import { getPeopleId, getPeopleImage } from '@services/getPeopleData.js';
-import PeopleList from '@components/PeopleList'
 
- 
 
-const PeoplePage = ({ setEerrorApi }) => {
+
+const PeoplePage = ({ setErrorApi }) => {
     const [people, setPeople] = useState(null);
 
 
@@ -20,8 +20,6 @@ const PeoplePage = ({ setEerrorApi }) => {
             const peopleList = res.results.map(({ name, url }) => {
                 const id = getPeopleId(url);
                 const img = getPeopleImage(id);
-                console.log(id);
-                console.log(img)
 
                 return {
                     name,
@@ -31,9 +29,9 @@ const PeoplePage = ({ setEerrorApi }) => {
             })
 
             setPeople(peopleList)
-            setEerrorApi(false);
+            setErrorApi(false);
         } else {
-            setEerrorApi(true);
+            setErrorApi(true);
         }
     }
 
