@@ -15,7 +15,7 @@ const UiButton = ({
             <button
                 onClick={onClick}
                 disabled={disabled}
-                className={cn(styles.button, styles[theme])}>
+                className={cn(styles.button, styles[theme], classes)}>
                 {text}
             </button>
         </>
