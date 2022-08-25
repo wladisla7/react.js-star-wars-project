@@ -2,15 +2,23 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import PeopleList from '@components/PeopleList'
+import PeopleNavigation from '@components/PeopleNavigation';
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
-import { getApiResource } from '@utils/network.js';
-import { getPeopleId, getPeopleImage } from '@services/getPeopleData.js';
+import { getApiResource, changeHTTP } from '@utils/network.js';
+import { getPeopleId, getPeopleImage, getPeoplePageId } from '@services/getPeopleData.js';
 import { API_PEOPLE } from '@constants/api.js';
+import { useQueryParams } from '@hooks/useQueryParams'
 
 
 
 const PeoplePage = ({ setErrorApi }) => {
     const [people, setPeople] = useState(null);
+    const [nextPage, setNextPage] = useState(null);
+    const [prevPage, setPrevPage] = useState(null);
+    const [counterPage, setCounterPage] = useState(1);
+
+    const query = useQueryParams();
+    const queryPage = query.get('page');
 
 
     const getResource = async (url) => {
@@ -29,7 +37,10 @@ const PeoplePage = ({ setErrorApi }) => {
                 }
             })
 
-            setPeople(peopleList)
+            setPeople(peopleList);
+            setPrevPage(changeHTTP(res.previous));
+            setNextPage(changeHTTP(res.next));
+            setCounterPage(getPeoplePageId(url));
             setErrorApi(false);
         } else {
             setErrorApi(true);
@@ -37,11 +48,16 @@ const PeoplePage = ({ setErrorApi }) => {
     }
 
     useEffect(() => {
-        getResource(API_PEOPLE);
+        getResource(API_PEOPLE + queryPage);
     }, []);
     return (
         <>
-            <h1 className="headerText">Navigator</h1>
+            <PeopleNavigation 
+            getResource={getResource}
+            prevPage={prevPage}
+            nextPage={nextPage}
+            counterPage={counterPage}
+            />
             {people && <PeopleList people={people} />}
         </>
 
