@@ -1,0 +1,60 @@
+.button {
+    min-width: 100px;
+
+    margin: 0 20px;
+    padding: 10px 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+
+    background: none;
+    outline: none;
+
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.link {
+    margin: 20px;
+}
+
+.button:disabled,
+.button:disabled:hover {
+    color: gray;
+    border-color: gray;
+    cursor: auto;
+    background-color: transparent;
+}
+
+.dark {
+    border: 1px solid white;
+    color: white;
+}
+
+.dark:hover {
+    background-color: white;
+    color: black;
+}
+
+.light {
+    border: 1px solid black;
+    color: black;
+}
+
+
+.light:hover {
+    background-color: black;
+    color: white;
+}
