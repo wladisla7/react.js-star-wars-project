@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+ 
 
 import PropTypes from 'prop-types'
 
@@ -14,8 +15,9 @@ const PeopleList = ({ people }) => {
                     </Link>
                     <p>{name}</p>
                 </li>
-            )}
-        </ul>
+            )
+            }
+        </ul >
     )
 }
 
