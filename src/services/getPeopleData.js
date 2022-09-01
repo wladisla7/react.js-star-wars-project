@@ -14,7 +14,7 @@ const checkProtocol = url => {
 
 export const getPeoplePageId = url => {
     const position = url.lastIndexOf(SWAPI_PARAM_PAGE)
-    const id = url.slice(position + SWAPI_PARAM_PAGE.length, url.length);
+    const id = url.slice(position + SWAPI_PARAM_PAGE.length);
 
     return Number(id);
 }
