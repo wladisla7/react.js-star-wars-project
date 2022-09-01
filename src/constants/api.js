@@ -24,5 +24,4 @@ export const GUIDE_IMG_EXTENTION = '.jpg';
 
 export const URL_IMG_PERSONE = GUIDE_ROOT_IMG + GUIDE_PEOPLE;
 
-//characters/1.jpg
-
+ 

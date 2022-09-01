@@ -7,6 +7,7 @@ import styles from './App.module.css';
 
 const App = () => {
   return (
+
     <div className={styles.wrapper}>
       <Header />
       <Routes>
@@ -14,6 +15,7 @@ const App = () => {
           <Route
             key={index}
             path={route.path}
+            exact={route.exact}
             element={route.element}
           />
         ))}

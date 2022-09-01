@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import PeopleList from '@components/PeopleList'
 import PeopleNavigation from '@components/PeopleNavigation';
+
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { getApiResource, changeHTTP } from '@utils/network.js';
 import { getPeopleId, getPeopleImage, getPeoplePageId } from '@services/getPeopleData.js';
@@ -32,7 +33,7 @@ const PeoplePage = ({ setErrorApi }) => {
 
                 return {
                     name,
-                    url,
+                    id,
                     img
                 }
             })
