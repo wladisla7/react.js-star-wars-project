@@ -9,7 +9,7 @@ import SearchPageInfo from '@components/SearchPage';
 import UiInput from '@ui/UiInput'
 
 import styles from './SearchPage.module.css'
-import { style } from '@mui/system';
+
 
 const SearchPage = ({ setErrorApi }) => {
     const [inputSearchValue, setInputSearchValue] = useState();
