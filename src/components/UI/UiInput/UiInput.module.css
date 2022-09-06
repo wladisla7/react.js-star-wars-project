@@ -1,0 +1,45 @@
+.wrapperInput {
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.input {
+    min-width: 300px;
+    padding: 10px 15px;
+    padding-right: calc(35px + 15px);
+    border: 3px solid rgb(157, 157, 187);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input:focus {
+    border: 3px solid rgb(136, 136, 195);
+}
+
+.clear {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 35px;
+    height: 28px;
+    padding: 10px;
+    object-fit: contain;
+    object-position: center center;
+    transition: .5;
+    -webkit-transition: .5;
+    -moz-transition: .5;
+    -ms-transition: .5;
+    -o-transition: .5;
+    opacity: .4;
+    cursor: pointer;
+}
+
+.clearDisabled {
+    opacity: .2;
+}
